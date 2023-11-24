@@ -6,6 +6,7 @@
 int appWidth, appHeight, smallerDimension;
 Boolean OS_On=false;
 PFont CorbelLight;
+float ssSpaceBarX, ssSpaceBarY, ssSpaceBarWidth, ssSpaceBarHeight;
 //
 void setup() {
   size(800, 600);
@@ -13,13 +14,21 @@ void setup() {
   appHeight = height; //displayHeight
   //
   displayAlgorithm();
+  textSetup(); //See Text
+   //
+  //Population
+  float centerX=appWidth*1/2, centerY=appHeight*1/2;
+  ssSpaceBarX = centerX - ssSpaceBarWidth*1/2;
+  ssSpaceBarY = centerY - ssSpaceBarHeight*1/2;
+  ssSpaceBarWidth = appWidth*1/2;
+  ssSpaceBarHeight = appHeight*1/10;
   //
-  //Text Setup 
-  CorbelLight = createFont("CorbelLight, 48"); 
+  //DIVs
+  //Layout our text space and typographical features
+  rect( ssSpaceBarX, ssSpaceBarY, ssSpaceBarWidth, ssSpaceBarHeight );
 } //End setup
 //
 void draw() {
-  if ( OS_On == true ) {};
   if ( OS_On == true ) splashScreen();
 } //End draw
 //

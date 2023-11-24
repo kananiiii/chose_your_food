@@ -3,7 +3,11 @@ void displayAlgorithm() {
   //Purpose: CANVAS fits in monitor & dimension size is known
   //Output #1: Console confirms CANVAS will fit in the monitor
   //Output #4: Console confirms dimension sizes (smaller and larger)
-  if ( width < displayWidth && height < displayHeight ) {
+  if ( width <= displayWidth && height <= displayHeight ) {
+    /*If useing fullScreen, use
+     - displayWidth & displayHeight
+     - instead of width & height
+     */
     println("CANVAS fits in DISPLAY GEOMETRY");
     println("Display Dimension:", "width:"+width, "height:"+height, "Display Width:"+displayWidth, "Display Height:"+displayHeight );
   } else {
