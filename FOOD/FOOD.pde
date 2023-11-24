@@ -1,10 +1,11 @@
-/* To Do List for Chocolate Chip Cookies
+/* To Do List for choose your food 
  -
  */
 //
 //Global Variables
 int appWidth, appHeight, smallerDimension;
 Boolean OS_On=false;
+PFont CorbelLight;
 //
 void setup() {
   size(800, 600);
@@ -13,6 +14,8 @@ void setup() {
   //
   displayAlgorithm();
   //
+  //Text Setup 
+  CorbelLight = createFont("CorbelLight, 48"); 
 } //End setup
 //
 void draw() {
