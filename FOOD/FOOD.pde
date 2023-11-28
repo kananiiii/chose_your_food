@@ -4,9 +4,10 @@
 //
 //Global Variables
 int appWidth, appHeight, smallerDimension;
-Boolean OS_On=false;
+Boolean OS_On=false, programStart=false;
 PFont CorbelLight;
 float ssSpaceBarX, ssSpaceBarY, ssSpaceBarWidth, ssSpaceBarHeight;
+color resetColor=white=#FFFFFF;
 //
 void setup() {
   size(800, 600);
@@ -15,13 +16,8 @@ void setup() {
   //
   displayAlgorithm();
   textSetup(); //See Text
-   //
-  //Population
-  float centerX=appWidth*1/2, centerY=appHeight*1/2;
-  ssSpaceBarX = centerX - ssSpaceBarWidth*1/2;
-  ssSpaceBarY = centerY - ssSpaceBarHeight*1/2;
-  ssSpaceBarWidth = appWidth*1/2;
-  ssSpaceBarHeight = appHeight*1/10;
+  population ();
+  loadImages();
   //
   //DIVs
   //Layout our text space and typographical features
@@ -29,7 +25,8 @@ void setup() {
 } //End setup
 //
 void draw() {
-  if ( OS_On == true ) splashScreen();
+  if ( OS_On == true && programStart == false ) splashScreen();
+  if ( OS_On == true && programStart == true ) homescreen();
 } //End draw
 //
 void mousePressed() {
@@ -37,6 +34,9 @@ void mousePressed() {
 } //End mousePressed
 //
 void keyPressed() {
+  if ( key==' ' )
+  if ( key==CODED || keyCode==ESC ) exit();
+  
 } //End keyPressed
 //
 //End MAIN Program

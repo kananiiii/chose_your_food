@@ -10,7 +10,7 @@ void textSetup() {
   //Fonts from OS (Operating System)
   String[] fontList = PFont.list(); //To list all fonts available on OS
   //printArray(fontList); //For listing all possible fonts to choose from, then createFont
-  CorbelLight = createFont("CorbelLight, 48"); //Verify the font exists in Processing.Java
+  CorbelLight = createFont("ArialMT,48"); //Verify the font exists in Processing.Java
   // Tools / Create Font / Find Font / Do not press "OK", known bug
 } //End Text Setup
 //
